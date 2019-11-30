@@ -1,0 +1,26 @@
+---
+title: 'Producing high-quality, reproducible reports using R and Markdown'
+output: 
+  html_document: 
+    toc: yes
+    toc_depth: 2
+    toc_float: true
+---
+
+<br>
+
+This page was last updated `r format(Sys.time(), "%a %b %d %X")`.
+
+This workshop uses material from the Software Carpentry lesson: R for Reproducible Scientific Analysis - [Producing Reports with knitr](http://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
+[The Carpentries](https://carpentries.org/) teaches foundational coding, and data science skills to researchers worldwide. [Software Carpentry](https://software-carpentry.org/), [Data Carpentry](https://datacarpentry.org/), and [Library Carpentry](https://librarycarpentry.org/) workshops are based on our lessons. 
+
+
+# Requirements
+
+* Participants must bring a laptop with a Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed below). 
+
+* Workshop instructors and learners must be prepared to follow the Carpentries [Code of Conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html).
+
+
+# Introduction

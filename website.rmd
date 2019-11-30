@@ -1,0 +1,86 @@
+---
+output: 
+  html_document: 
+    toc: yes
+    toc_depth: 2
+    toc_float: true
+---
+
+# Promote Yourself
+This workshop
+
+This page was last updated `r format(Sys.time(), "%a %b %d %X")`.
+
+
+# Requirements
+
+* Participants must bring a laptop with a Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed below). 
+
+* Workshop instructors and learners must be prepared to follow the Carpentries [Code of Conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html).
+
+
+## Setup
+To participate in this workshop, you will need the software described below. 
+In addition, you will need an up-to-date web browser.
+Click the header link to expand the section for instructions for that specific program.
+
+### <a href="#git" data-toggle="collapse">Git</a>
+
+<div id="git" class="collapse">
+
+Git is a version control system that lets you track who made changes to what when and has options for easily updating a shared or public version of your code on <a href="https://github.com/">github.com</a>. You will need a <a href="https://help.github.com/articles/supported-browsers/">supported</a> web browser (current versions of Chrome, Firefox or Safari, or Internet Explorer version 9 or above).
+  
+You will need an account at <a href="https://github.com/">github.com</a> for parts of the Git lesson. Basic GitHub accounts are free. We encourage you to create a GitHub account if you don't have one already. Please consider what personal information you'd like to reveal. For example, you may want to review these <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions for keeping your email address private</a> provided at GitHub.
+
+* **Windows (FIX THIS)**
+
+Git should be installed on your computer as part of your Bash install (described above). 
+      
+* **macOS**
+
+<a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>
+      
+<strong>For OS X 10.9 and higher</strong>, install Git for Mac by downloading and running the most recent "mavericks" installer from <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>. After installing Git, there will not be anything in your `/Applications` folder, as Git is a command line program. 
+
+<strong>For older versions of OS X (10.5-10.8)</strong> use the most recent available installer labelled "snow-leopard" <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.
+      
+* **Linux**
+
+If Git is not already available on your machine you can try to install it via your distro's package manager. For Debian/Ubuntu run `sudo apt-get install git` and for Fedora run `sudo dnf install git`.
+      
+</div>
+
+### <a href="#r" data-toggle="collapse">R & R Studio</a>
+
+<div id="r" class="collapse">
+
+<a href="https://www.r-project.org">R</a> is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. To interact with R, we use <a href="https://www.rstudio.com/">RStudio</a>.
+  
+* **Windows**
+
+<a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
+
+Install R by downloading and running <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a> from <a href="https://cran.r-project.org/index.html">CRAN</a>.
+
+Also, please install the <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>. Note that if you have separate user and admin accounts, you should run the installers as administrator (right-click on .exe file and select "Run as administrator" instead of double-clicking). Otherwise problems may occur later, for example when installing R packages.
+      
+* **macOS**
+
+<a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
+
+Install R by downloading and running <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a> from <a href="https://cran.r-project.org/index.html">CRAN</a>. 
+
+Also, please install the <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+
+* **Linux**
+
+You can download the binary files for your distribution from <a href="https://cran.r-project.org/index.html">CRAN</a>. Or you can use your package manager (e.g. for Debian/Ubuntu run `sudo apt-get install r-base` and for Fedora run `sudo dnf install R`).  Also, please install the <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio IDE</a>.
+
+</div>
+
+
+
+# Getting started: Basic Site
+
+
+# Next phase: Blog Aware

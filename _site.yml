@@ -1,0 +1,20 @@
+name: "ichps-workshops"
+output_dir: "."
+navbar:
+  title: "ICHPS 2020"
+  left:
+    - text: "Reproducible Reports"
+      icon: fa-book
+      href: report.html
+    - text: "Build your own Website"
+      icon: fa-globe
+      href: website.html
+  right:
+    - text: "Questions/Comments"
+      icon: fa-question
+      href: mailto:rdonatello@csuchico.edu 
+      
+output:
+  html_document:
+    theme: readable
+    highlight: pygments

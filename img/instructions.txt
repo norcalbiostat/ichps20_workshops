@@ -1,0 +1,69 @@
+Pre-req:
+
+* Knowledge of git and a Github account
+* R and R Studio installed
+-this tutorial uses R 3.6.1 and RMarkdown 1.18
+* Packages: rmarkdown
+
+
+0. Alternate path: clone my example_website repo
+1. Start a new repo in github. 
+- Add a readme so you can clone it right away. 
+2. Open R Studio
+- top right: Project - new - Version control - git
+- back to github, green 'clone or download' - copy button. 
+- paste into repository URL. 
+- recommended to leave project directory name alone
+- reminder: don't put a git inside a git. 
+- also recommended to open in new session
+- create project
+3. Create files	
+- download them from []
+- From the terminal type: touch index.Rmd and touch _site.yml
+- yaml files are picky about indenting and spacing
+- Can do file-new rmarkdown, but then delete all the template text, and all the header code
+4. Restart R so that you get the build tab
+5. Edit index file to add content
+6. Edit site.yml to add navbar and theme. 
+  - if you didn't download this file directly (used touch), then use the copy icon to copy code. 
+  - don't highlight/copy or you'll get incorrect spacing. 
+7. build website - preview and approve
+8. git add/commit/push to github
+9. Back to github: time to deploy
+  - settings -> github pages --> source: master branch
+  - don't choose theme here. do that in your _site.yml file
+  - page will refresh. scroll back down to github pages to see website URL
+  - recommended to copy this URL and paste at the top of repo main page. 
+
+---- need to show alterantive options if don't know git
+
+--- closing notes
+- file org. everything in main folder gets re-rendered when you build site
+- so everything not in main folder won't be auto updated
+- show link to themes (or at least html themes)
+
+--- 
+
+# Questions to address
+* Why build a website? 
+* Why use R/Markdown? 
+ - accessibility
+ - mobile friendly
+ - easy to create and distribute OER material i.e. (not linked to blackboard)
+* Why use GitHub? 
+ - free
+ - personal domain names? 
+ - Other hosting options? 
+* Why use R projects
+	- file organization
+	- sets working directory, appropriate build tools
+* What about more advanced stuff blog aware/dynamic? 
+  - blogdown+hugo is the next step
+
+
+# Additional references and tutorials
+* https://rmarkdown.rstudio.com/lesson-13.html
+* https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html
+* https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html
+
+
