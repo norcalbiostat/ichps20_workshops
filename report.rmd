@@ -1,7 +1,7 @@
 ---
 title: 'Producing high-quality, reproducible reports using R and Markdown'
-output: 
-  html_document: 
+output:
+  html_document:
     toc: yes
     toc_depth: 2
     toc_float: true
@@ -14,6 +14,24 @@ This page was last updated `r format(Sys.time(), "%a %b %d %X")`.
 This workshop uses material from the Software Carpentry lesson: R for Reproducible Scientific Analysis - [Producing Reports with knitr](http://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
 
 [The Carpentries](https://carpentries.org/) teaches foundational coding, and data science skills to researchers worldwide. [Software Carpentry](https://software-carpentry.org/), [Data Carpentry](https://datacarpentry.org/), and [Library Carpentry](https://librarycarpentry.org/) workshops are based on our lessons. 
+
+# Hardware and Software Setup
+
+To participate in this workshop, you will need a laptop with a user account that has software installation privileges to install the software described below.
+
+
+### R and RStudio are required software for the workshop and you will need to install the latest versions on your computer.
+
+**Base R download and setup:**
+  * The latest version of R can be downloaded [here](https://cloud.r-project.org)
+  * For MacOS install the latest `.pkg` release
+  * for Windows install the latest `base` release
+
+**RStudio download and setup:**
+* **RStudio** is an application (an integrated development environment or IDE) that facilitates the use of R and offers a number of nice additional features.
+* You will need to download and install the free `Desktop version` for your computer.
+* Downloaded the RStudio Desktop IDE [here](https://www.rstudio.com/products/rstudio/download/)  
+
 
 
 # Introduction
