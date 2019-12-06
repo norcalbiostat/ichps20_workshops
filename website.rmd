@@ -1,4 +1,5 @@
 ---
+title: "Website building"
 output: 
   html_document: 
     toc: yes
@@ -6,14 +7,20 @@ output:
     toc_float: true
 ---
 
-# Website building
-
 _This page was last updated `r format(Sys.time(), "%a %b %d %X")`._
 
-This workshop is designed to introduce you to two methods to build your own custom website where you can easily share your projects, code, and other resources easily without having to pay for your own server or learn additional coding languages such as HTML. 
+<br>
+
+# Learning Objectives
+
+* Recognize the minimal requirements to build a website using R and Markdown. 
+* Build a basic level website using R and Markdown
+* Publish this website to GitHub
+* Become aware of how the `blogdown` R package can be used to create responsive websites
+* Download and compile a starter website based on blogdown. 
 
 
-## Software Setup
+# Software Setup
 To participate in this workshop, you will need the software described below. 
 In addition, you will need an up-to-date web browser.
 
@@ -59,7 +66,27 @@ To interact with R, we use the _Integrated Development Environment (IDE)_ [RStud
 
 > This also isn't a workshop on how to use R. Most of what we will do won't even be in the R language. However we will still use R Studio for ease of integration with GitHub, project management, and the integration of R code and markdown to produce webpages like the one you are looking at now. 
 
+
+## R packages
+
+* knitr
+* Rmarkdown
+* devtools
+* blogdown
+
+## Hugo
+Hugo ((https://gohugo.io) is a static site generator, that is used by `blogdown` to create dynamic websites. `blogdown` has a helper function to do this installation for us. 
+
+```{r, eval=FALSE}
+blogdown::install_hugo()
+```
+
+
 # Getting started: Basic Site
 
 
 # Next phase: Blog Aware
+
+# References
+
+* `blogdown`: Creating Websites with R Markdown https://bookdown.org/yihui/blogdown/

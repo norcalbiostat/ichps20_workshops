@@ -7,9 +7,19 @@ output:
     toc_float: true
 ---
 
+_This page was last updated `r format(Sys.time(), "%a %b %d %X")`._
+
 <br>
 
-_This page was last updated `r format(Sys.time(), "%a %b %d %X")`._
+# Learning Objectives
+
+
+* Understand the value of writing reproducible reports
+* Learn how to recognise and compile the basic components of an R Markdown file
+* Become familiar with R code chunks, and understand their purpose, structure and options
+* Demonstrate the use of inline chunks for weaving R outputs into text blocks, for example when discussing the results of some calculations
+* Be aware of alternative output formats to which an R Markdown file can be exported
+
 
 This workshop uses material from the Software Carpentry lesson: R for Reproducible Scientific Analysis - [Producing Reports with knitr](http://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
 
