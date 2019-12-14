@@ -1,5 +1,5 @@
 ---
-title: 'Producing high-quality, reproducible reports using R and Markdown'
+title: "Producing high-quality, reproducible reports using R and Markdown"
 output:
   html_document:
     toc: yes
@@ -10,6 +10,8 @@ output:
 _This page was last updated `r format(Sys.time(), "%a %b %d %X")`._
 
 <br>
+
+
 
 # Learning Objectives
 
