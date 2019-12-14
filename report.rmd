@@ -13,9 +13,8 @@ _This page was last updated `r format(Sys.time(), "%a %b %d %X")`._
 
 # Learning Objectives
 
-
 * Understand the value of writing reproducible reports
-* Learn how to recognise and compile the basic components of an R Markdown file
+* Learn how to recognize and compile the basic components of an R Markdown file
 * Become familiar with R code chunks, and understand their purpose, structure and options
 * Demonstrate the use of inline chunks for weaving R outputs into text blocks, for example when discussing the results of some calculations
 * Be aware of alternative output formats to which an R Markdown file can be exported
@@ -23,7 +22,7 @@ _This page was last updated `r format(Sys.time(), "%a %b %d %X")`._
 
 This workshop uses material from the Software Carpentry lesson: R for Reproducible Scientific Analysis - [Producing Reports with knitr](http://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
 
-[The Carpentries](https://carpentries.org/) teaches foundational coding, and data science skills to researchers worldwide. [Software Carpentry](https://software-carpentry.org/), [Data Carpentry](https://datacarpentry.org/), and [Library Carpentry](https://librarycarpentry.org/) workshops are based on our lessons. 
+[The Carpentries](https://carpentries.org/) teaches foundational coding, and data science skills to researchers worldwide. [Software Carpentry](https://software-carpentry.org/), [Data Carpentry](https://datacarpentry.org/), and [Library Carpentry](https://librarycarpentry.org/) workshops are based on our lessons.
 
 # Hardware and Software Setup
 
@@ -44,6 +43,52 @@ To participate in this workshop, you will need a laptop with a user account that
 * You will need to download and install the free `Desktop version` for your computer.
 * Downloaded the RStudio Desktop IDE [here](https://www.rstudio.com/products/rstudio/download/)  
 
-
+---
 
 # Introduction
+Data analysts tend to write a lot of reports, describing their analyses and results, for their collaborators or to document their work for future reference.
+
+Many new users begin by first writing a single R script containing all of the work. Then simply share the analysis by emailing the script and various graphs as attachments. But this can be cumbersome, requiring a lengthy discussion to explain which attachment was which result.
+
+Creating a web page (as an html file) by using `R Markdown` makes things easier. The report can be one long stream, so tall figures that wouldn’t ordinary fit on one page can be kept full size and easier to read, since the reader can simply keep scrolling. Formatting is simple and easy to modify, allowing you to spend more time on your analyses instead of writing reports.
+
+**Literate Programming**
+Ideally, analysis reports are reproducible documents: If an error is discovered, or if some additional subjects are added to the data, you can just re-compile the report and get the new or corrected results (versus having to reconstruct figures, paste them into a Word document, and further hand-edit various detailed results).
+
+In RStudio, using a package called `knitr`, you can create documents that contain a mixture of text and chunks of executable code.  Any plots or other results that are displayed from the code chunks are embedded in the document.  
+
+This sort of idea has been called `“literate programming”`.
+
+**Markdown**
+`Markdown` is a light-weight mark-up language for creating web pages and a way to style text on the web. You control the display of the document; formaing words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown.
+
+We will use `R Markdown` which mixes Markdown with R.     
+
+**This workshop will cover:**
+* Creating an R Markdown file
+* Learning the basic components of R Markdown
+* Using R code chunks
+* Compiling a document with knitr
+* Other output options
+
+
+
+---
+# Resources
+
+**Markdown**
+Useful Markdown reference guides:
+* [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
+* [Markdown Syntax](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+* [Markdown Extended Syntax](https://www.markdownguide.org/extended-syntax)
+
+**RStudio**
+Comprehensive RStudio R Markdown cheat sheets:
+* [R Markdown Cheat Sheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) [PDF]
+* [R Markdown Cheat Sheet extended](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) [PDF]
+* Learn more at [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/)
+
+**knitr**
+Information about the `knitr` R package
+* [knitr Reference Card](https://cran.r-project.org/web/packages/knitr/vignettes/knitr-refcard.pdf)
+* [About knitr](https://yihui.org/knitr/)
