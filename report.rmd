@@ -62,35 +62,40 @@ In RStudio, using a package called `knitr`, you can create documents that contai
 This sort of idea has been called `“literate programming”`.
 
 **Markdown**
-`Markdown` is a light-weight mark-up language for creating web pages and a way to style text on the web. You control the display of the document; formaing words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown.
+
+`Markdown` is a light-weight mark-up language for creating web pages and a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown.
 
 We will use `R Markdown` which mixes Markdown with R.     
 
-**This workshop will cover:**
-* Creating an R Markdown file
-* Learning the basic components of R Markdown
-* Using R code chunks
-* Compiling a document with knitr
-* Other output options
+**This workshop will cover:**  
+
+* Creating an R Markdown file  
+* Learning the basic components of R Markdown  
+* Using R code chunks  
+* Compiling a document with knitr  
+* Other output options  
 
 
 
 ---
 # Resources
 
-**Markdown**
-Useful Markdown reference guides:
-* [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)
-* [Markdown Syntax](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+**Markdown**  
+Useful Markdown reference guides:  
+
+* [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/)  
+* [Markdown Syntax](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)  
 * [Markdown Extended Syntax](https://www.markdownguide.org/extended-syntax)
 
-**RStudio**
-Comprehensive RStudio R Markdown cheat sheets:
-* [R Markdown Cheat Sheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) [PDF]
-* [R Markdown Cheat Sheet extended](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) [PDF]
+**RStudio**  
+Comprehensive RStudio R Markdown cheat sheets:  
+
+* [R Markdown Cheat Sheet](https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) [PDF]  
+* [R Markdown Cheat Sheet extended](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) [PDF]  
 * Learn more at [https://rmarkdown.rstudio.com/](https://rmarkdown.rstudio.com/)
 
-**knitr**
-Information about the `knitr` R package
-* [knitr Reference Card](https://cran.r-project.org/web/packages/knitr/vignettes/knitr-refcard.pdf)
+**knitr**  
+Information about the `knitr` R package  
+
+* [knitr Reference Card](https://cran.r-project.org/web/packages/knitr/vignettes/knitr-refcard.pdf)  
 * [About knitr](https://yihui.org/knitr/)
