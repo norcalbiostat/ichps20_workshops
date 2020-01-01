@@ -92,7 +92,7 @@ Click 'Create Repository' to finish, but keep this page open. We'll come back to
 
 ### 3. Create necessary files in R Studio.
 
-* In the *Terminal* window (tab to the right of the *Console*), create the `_site.yml` and `index.Rmd` files using the `touch` command. Type the following commands in the Terminal one at a time, pressing <kbd>Return</kbd> or <kbd>Enter</kbd> after each to execute. 
+* In the *Terminal* window (tab to the right of the *Console*), create the `_site.yml` and `index.Rmd` files using the `touch` command. Type the following commands in the Terminal one at a time, pressing <kbd>Return</kbd> or <kbd>Enter</kbd> after each line to execute. 
 ```
 touch _site.yml
 touch index.rmd
@@ -174,10 +174,43 @@ This will _push_ your changes up to GitHub's servers online. You may have to ent
 * Go back to your GitHub repo page and refresh - you should now see that your repo now contains the new code, and HTML files that you have been working on. 
 * Click _Settings_ in the top right of the navigation bar in your repository. 
     - Scroll down to the **GitHub Pages** section. 
-    - Under _Source_, select _Master branch_. 
+    - Under _Source_, select _Master branch_. (_Note: [Chapter 3.3 of the bookdown manual](https://bookdown.org/yihui/blogdown/github-pages.html) has instructions for publishing something other than the top level folder for a repo, such as a `public` folder_)
     
+After the page refreshes, you will see the URL to your website in at the top of GitHub pages section. 
 
-_Note: [Chapter 3.3 of the bookdown manual](https://bookdown.org/yihui/blogdown/github-pages.html) has instructions for publishing something other than the top level folder for a repo, such as a `public` folder_
+* Click on this link to see what your public facing website looks like!
+* Copy this URL, we're going to paste it in the repo settings so it can be found easy. 
+* Go back to your main repo page by clicking on the name of your repo at the top of the GitHub page. 
+    - Click **Edit**
+    - Add a short description, and paste the URL into the _Website_ field. 
+
+
+### 8. Adding Content. 
+
+Let's add an example analysis project to showcase on our website. 
+
+* Go back to R Studio. 
+    - Create a new R Markdown file using _File -> New R Markdown_ so we can get the example R Markdown content that includes a plot. 
+    - Save this file with a name such as `project.Rmd`
+    - Knit this file to produce a HTML file. 
+* Add a link to the project HTML page to your `_site.yml` configuration file by adding a new `text` line. Be mindful about the spacing here. 
+
+```
+    - text: "My Projects"
+      href: project.html
+```
+
+* Rebuild your website by clicking the _Build Website_ button in the _Build_ tab in the top right pane.
+* View your changes locally, make a change if you see fit. 
+* Add your changes to version control from the Terminal: 
+
+```
+git add -A
+git commit -m "add project"
+git push
+```
+
+* Refresh your live webpage on GitHub to see the results! 
 
 ----
 

@@ -463,7 +463,7 @@ div.tocify {
 </div>
 
 
-<p><em>This page was last updated Tue Dec 31 16:31:21.</em></p>
+<p><em>This page was last updated Wed Jan 01 10:11:29.</em></p>
 <p><br></p>
 <div id="learning-objectives" class="section level1">
 <h1>Learning Objectives</h1>
@@ -529,6 +529,7 @@ div.tocify {
 <li>keep it a PUBLIC repo</li>
 <li>YES initalize with a README</li>
 </ul>
+<p>Click ‘Create Repository’ to finish, but keep this page open. We’ll come back to it a few times.</p>
 </div>
 <div id="create-a-project-in-r-studio-and-clone-your-new-repo-into-this-project." class="section level3">
 <h3>2. Create a project in R Studio and clone your new repo into this project.</h3>
@@ -547,7 +548,7 @@ div.tocify {
 <div id="create-necessary-files-in-r-studio." class="section level3">
 <h3>3. Create necessary files in R Studio.</h3>
 <ul>
-<li><p>In the <em>Terminal</em> window (tab to the right of the <em>Console</em>), create the <code>_site.yml</code> and <code>index.Rmd</code> files using the <code>touch</code> command. Type the following commands in the Terminal one at a time, pressing <kbd>Return</kbd> or <kbd>Enter</kbd> after each to execute.</p>
+<li><p>In the <em>Terminal</em> window (tab to the right of the <em>Console</em>), create the <code>_site.yml</code> and <code>index.Rmd</code> files using the <code>touch</code> command. Type the following commands in the Terminal one at a time, pressing <kbd>Return</kbd> or <kbd>Enter</kbd> after each line to execute.</p>
 <pre><code>touch _site.yml
 touch index.rmd</code></pre>
 <p>You can view these files in the <em>File</em> pane (lower left). You can open supported file types by clicking on the name of the file from this pane.</p></li>
@@ -595,7 +596,7 @@ touch index.rmd</code></pre>
 <div id="notes-tips-and-comments--" class="section level4">
 <h4>Notes, Tips and Comments -</h4>
 <ul>
-<li>Note: Clicking “Build Website” will render every <code>.md</code> and <code>.Rmd</code> file in your top level project folder into an HTML file.
+<li>Clicking “Build Website” will render every <code>.md</code> and <code>.Rmd</code> file in your top level project folder into an HTML file.
 <ul>
 <li>This is important to keep in mind when creating a website with a lot of pages.</li>
 <li>Code files in sub-folders will not be automatically rendered.</li>
@@ -612,10 +613,58 @@ touch index.rmd</code></pre>
 <h3>7. Push to GitHub &amp; publish your website.</h3>
 <p>Let’s get your test site up for the world to see.</p>
 <ul>
-<li><p>In the <em>Terminal</em> window, type the following <code>git</code> commands:</p>
-<pre><code>git add -A </code></pre></li>
+<li>In the <em>Terminal</em> window, stage and commit your files to version control by executing the following commands:</li>
 </ul>
-<p>to <em>stage</em> all files that have been changed and/or added. <em>Staging</em> is the process of adding a file to be tracked under version control. - <code>git commit -m &quot;first commit&quot;</code> Every</p>
+<pre><code>git add -A </code></pre>
+<p>This will <em>stage</em> all files that have been changed and/or added. <em>Staging</em> is the process of adding a file to be tracked under version control.</p>
+<pre><code>git commit -m &quot;first commit&quot;</code></pre>
+<p>Every commit needs a message. Try to make it informative, yet brief.</p>
+<pre><code>git push</code></pre>
+<p>This will <em>push</em> your changes up to GitHub’s servers online. You may have to enter your github username and password here. See <a href="https://happygitwithr.com/push-pull-github.html">happy git with R</a> for help storing your github credentials.</p>
+<ul>
+<li>Go back to your GitHub repo page and refresh - you should now see that your repo now contains the new code, and HTML files that you have been working on.</li>
+<li>Click <em>Settings</em> in the top right of the navigation bar in your repository.
+<ul>
+<li>Scroll down to the <strong>GitHub Pages</strong> section.</li>
+<li>Under <em>Source</em>, select <em>Master branch</em>. (<em>Note: <a href="https://bookdown.org/yihui/blogdown/github-pages.html">Chapter 3.3 of the bookdown manual</a> has instructions for publishing something other than the top level folder for a repo, such as a <code>public</code> folder</em>)</li>
+</ul></li>
+</ul>
+<p>After the page refreshes, you will see the URL to your website in at the top of GitHub pages section.</p>
+<ul>
+<li>Click on this link to see what your public facing website looks like!</li>
+<li>Copy this URL, we’re going to paste it in the repo settings so it can be found easy.</li>
+<li>Go back to your main repo page by clicking on the name of your repo at the top of the GitHub page.
+<ul>
+<li>Click <strong>Edit</strong></li>
+<li>Add a short description, and paste the URL into the <em>Website</em> field.</li>
+</ul></li>
+</ul>
+</div>
+<div id="adding-content." class="section level3">
+<h3>8. Adding Content.</h3>
+<p>Let’s add an example analysis project to showcase on our website.</p>
+<ul>
+<li>Go back to R Studio.
+<ul>
+<li>Create a new R Markdown file using <em>File -&gt; New R Markdown</em> so we can get the example R Markdown content that includes a plot.</li>
+<li>Save this file with a name such as <code>project.Rmd</code></li>
+<li>Knit this file to produce a HTML file.</li>
+</ul></li>
+<li>Add a link to the project HTML page to your <code>_site.yml</code> configuration file by adding a new <code>text</code> line. Be mindful about the spacing here.</li>
+</ul>
+<pre><code>    - text: &quot;My Projects&quot;
+      href: project.html</code></pre>
+<ul>
+<li>Rebuild your website by clicking the <em>Build Website</em> button in the <em>Build</em> tab in the top right pane.</li>
+<li>View your changes locally, make a change if you see fit.</li>
+<li>Add your changes to version control from the Terminal:</li>
+</ul>
+<pre><code>git add -A
+git commit -m &quot;add project&quot;
+git push</code></pre>
+<ul>
+<li>Refresh your live webpage on GitHub to see the results!</li>
+</ul>
 <hr />
 </div>
 </div>
