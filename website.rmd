@@ -69,7 +69,7 @@ R Markdown websites like this one can be built with a minimum of two files: a `_
 
 The `_site.yml` file controls the overall structure of the website, such as the order of the navigation bar and the color theme. 
 
-When these files are _rendered_ into HTML files, they can be hosted on GitHub for free. Then after turning on a few settings in your GitHub repo these files can be viewed as a magnificant webpage. 
+When these files are _rendered_ into HTML files, they can be hosted on GitHub for free. Then after turning on a few settings in your GitHub repository (repo) these files can be viewed as a magnificant webpage. 
 
 We are going to employ the "[GitHub first, R Studio second](https://happygitwithr.com/new-github-first.html)" approach. 
 
@@ -112,6 +112,12 @@ YAML headers, and this file, are very particular about spacing and tabs. To avoi
 * Paste this code into your `_site.yml` file. 
 * Remove lines 7 and 8 since right now we don't have an "About" page. 
 * Give your website a name and title!
+* Add the following line on a new line `2` (between `name` and `navbar`).
+    - This ensures that all rendered HTML files are saved in the top level directory. 
+
+```
+output_dir: "."
+```
 
 ### 5. Configure your index page. 
 
