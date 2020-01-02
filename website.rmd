@@ -231,6 +231,7 @@ Hugo (https://gohugo.io) is a static site generator, that is used by the R packa
 blogdown::install_hugo()
 ```
 
+> _In Progress_
 
 ----
 
