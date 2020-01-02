@@ -1,13 +1,16 @@
 ---
 title: "Producing high-quality, reproducible reports using R and Markdown"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     toc_depth: 2
-    toc_float: true
+    toc_float: yes
 ---
 
-_This page was last updated `r format(Sys.time(), "%a %b %d %X")`._
+_This page was last updated `r format(Sys.time(), "%a %b %d")`._
+[[Download this page as a PDF]](report.pdf)
 
 <br>
 

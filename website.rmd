@@ -1,14 +1,17 @@
 ---
 title: "Website building"
-output: 
-  html_document: 
+output:
+  html_document:
     toc: yes
+    toc_float: yes
     toc_depth: 2
-    toc_float: true
+  pdf_document:
+    toc: yes
+
 ---
 
-_This page was last updated `r format(Sys.time(), "%a %b %d %X")`._
-
+_This page was last updated `r format(Sys.time(), "%a %b %d")`._  
+[[Download this page as a PDF]](website.pdf)
 <br>
 
 # Learning Objectives
