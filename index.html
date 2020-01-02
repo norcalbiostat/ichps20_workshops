@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 66px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h2 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h3 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h4 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h5 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h6 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">ICHPS 2020</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="report.html">
+    <span class="fa fa-book"></span>
+     
+    Reproducible Reports
+  </a>
+</li>
+<li>
+  <a href="website.html">
+    <span class="fa fa-globe"></span>
+     
+    Build your own Website
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="mailto:rdonatello@csuchico.edu">
+    <span class="fa fa-question"></span>
+     
+    Questions/Comments
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br></p>
+<p>This website contains instructional material for workshops offered at the International Conference on Health Policy Statistics, San Diego, Jan 6-8, 2020.</p>
+<p>Use the navbar at the top, or click the workshop title to view the workshop materials page.</p>
+<ul>
+<li><p>Workshop participants must bring a laptop with a Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software programs installed. Details on software requirements and installation instructions are found on the individual workshop page.</p></li>
+<li><p>Workshop instructors and learners must be prepared to follow the Carpentries <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>.</p></li>
+</ul>
+<p><br> <br></p>
+<div id="producing-high-quality-reproducible-reports-using-r-and-markdown" class="section level2">
+<h2>📖 <a href="report.html">Producing high-quality, reproducible reports using R and Markdown</a></h2>
+<div id="instructor-reid-otsuji-uc-san-diego-library" class="section level4">
+<h4>Instructor: Reid Otsuji, UC San Diego Library</h4>
+<p><em>Data analysts tend to write a lot of reports, describing their analyses and results, for their collaborators or to document their work for future reference. When we first start out, we often write an R script with all of the work, and would just send emails to collaborators, describing the results and attaching various graphs. In discussing the results, there often can be confusion about which graph was which.</em> <em>Moving to writing formal reports, with Word or LaTeX, there is still much time spent on getting the figures to look right. Mostly, the concern is about page breaks and generating reproducible results. Imagine the work that has to be done to find the right analysis code to fix a problem in a report generated 4 years ago on an old data set, that you hope you can still find.</em> <em>Ideally, such analysis reports are reproducible documents: If an error is discovered, or if some additional subjects are added to the data, you can just re-compile the report and get the new or corrected results (versus having to reconstruct figures, paste them into a Word document, and further hand-edit various detailed results).</em> <em>This workshop will walk you through a key package in R called <code>knitr</code>, that is the leading solution to these types of reports. It allows you to create a document that is a mixture of text and chunks of code. When the document is processed by knitr, chunks of code will be executed, and graphs or other results inserted into a professional looking final document. Reports can be created in many formats such as Word, PDF or as HTML webpages, and are highly customizable.</em></p>
+</div>
+<div id="pre-requisites" class="section level4">
+<h4>Pre-requisites</h4>
+<ul>
+<li>Prior knowledge of R is helpful, but not necessary.</li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="promote-yourself---make-your-own-professional-website-without-knowing-html" class="section level2">
+<h2>🌍 <a href="website.html">Promote yourself - make your own professional website without knowing HTML</a></h2>
+<div id="instructor-robin-donatello-california-state-university-chico" class="section level4">
+<h4>Instructor: <a href="www.norcalbiostat.com">Robin Donatello</a>, California State University, Chico</h4>
+<p><em>Linkedin is great, your department or office website may have a bio on a page for you, but you need your own space to share your work. To demonstrate your talent, share recent projects or research, create and curate scientific content. Share your course lecture notes, blog about your recent research, or present analysis results in all their grisly detail as a supplement to a presentation or manuscript. This hands-on workshop will walk you through the process of creating two types of websites with no knowledge of HTML or CSS needed. The first type is a simple site that links a series of web pages you create using the Markdown language together into a website framework. This is ideal for a small project, such as presenting class materials, or an interactive dashboard. The second type of website is ideal for users who wish to write a blog or present a more “modern” feel to their website. This website uses the website generator Hugo, but again no knowledge of Hugo will be necessary. We will use the R studio environment to build these websites using Markdown, and demonstrations of how live code and output can be shown in these webpages, but no direct knowledge of R is required.</em></p>
+</div>
+<div id="pre-requisites-1" class="section level4">
+<h4>Pre-requisites</h4>
+<ul>
+<li>Basic/minimal knowledge of R, R Markdown, version control (e.g. git), GitHub</li>
+</ul>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
