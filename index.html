@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title></title>
+<title>index.utf8</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -54,9 +54,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -70,7 +68,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -175,8 +172,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -221,6 +216,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -233,20 +229,17 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -280,10 +273,17 @@ $(document).ready(function () {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="setup.html">
+    <span class="fa fa-gear"></span>
+     
+    Setup
+  </a>
+</li>
+<li>
   <a href="mailto:rdonatello@csuchico.edu">
     <span class="fa fa-question"></span>
      
-    Questions/Comments
+    Contact
   </a>
 </li>
       </ul>
@@ -303,7 +303,7 @@ $(document).ready(function () {
 <p>This website contains instructional material for workshops offered at the International Conference on Health Policy Statistics, San Diego, Jan 6-8, 2020.</p>
 <p>Use the navbar at the top, or click the workshop title to view the workshop materials page.</p>
 <ul>
-<li><p>Workshop participants must bring a laptop with a Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software programs installed. Details on software requirements and installation instructions are found on the individual workshop page.</p></li>
+<li><p>Workshop participants must bring a laptop with a Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software programs installed. Details on software requirements and installation instructions are found on the <a href="setup.html">Setup</a> page.</p></li>
 <li><p>Workshop instructors and learners must be prepared to follow the Carpentries <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>.</p></li>
 </ul>
 <p><br> <br></p>
@@ -322,7 +322,7 @@ $(document).ready(function () {
 </div>
 </div>
 <div id="promote-yourself---make-your-own-professional-website-without-knowing-html" class="section level2">
-<h2>🌍 <a href="website.html">Promote yourself - make your own professional website without knowing HTML</a></h2>
+<h2>🌎 <a href="website.html">Promote yourself - make your own professional website without knowing HTML</a></h2>
 <div id="instructor-robin-donatello-california-state-university-chico" class="section level4">
 <h4>Instructor: <a href="www.norcalbiostat.com">Robin Donatello</a>, California State University, Chico</h4>
 <p><em>Linkedin is great, your department or office website may have a bio on a page for you, but you need your own space to share your work. To demonstrate your talent, share recent projects or research, create and curate scientific content. Share your course lecture notes, blog about your recent research, or present analysis results in all their grisly detail as a supplement to a presentation or manuscript. This hands-on workshop will walk you through the process of creating two types of websites with no knowledge of HTML or CSS needed. The first type is a simple site that links a series of web pages you create using the Markdown language together into a website framework. This is ideal for a small project, such as presenting class materials, or an interactive dashboard. The second type of website is ideal for users who wish to write a blog or present a more “modern” feel to their website. This website uses the website generator Hugo, but again no knowledge of Hugo will be necessary. We will use the R studio environment to build these websites using Markdown, and demonstrations of how live code and output can be shown in these webpages, but no direct knowledge of R is required.</em></p>
@@ -352,6 +352,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

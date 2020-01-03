@@ -1,0 +1,176 @@
+---
+title: "Software Setup"
+output: html_document
+---
+
+<br>
+
+To participate in either of these workshops, you will need a laptop with a user account that has software installation privileges to install the software described below. 
+_Note that if you have separate user and admin accounts, you should run the installers as administrator (right-click on .exe file and select "Run as administrator" instead of double-clicking). Otherwise problems may occur later, for example when installing R packages._
+
+In addition, you will need an up-to-date web browser.
+
+To make best use of the workshop time please have the necessary programs and R packages installed prior to the start of the workshop. If you have any questions, click the _Contact_ link in the top right of this website to email the workshop organizer. 
+
+Click the arrows to expand the section to show installation and setup instructions for each program. 
+
+----
+
+
+<details>
+  <summary><font size="3">R (Both workshops)</font></summary>
+    
+**R** is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. The project website is https://www.r-project.org. 
+
+* **Windows** ([Video Tutorial](https://www.youtube.com/watch?v=q0PjTAylwoU)). Install R by downloading and running [this .exe file](https://cran.r-project.org/bin/windows/base/release.htm) from CRAN(https://cran.r-project.org/index.html).
+
+* **macOS** ([Video Tutorial](https://www.youtube.com/watch?v=5-ly3kyxwEg)). Install R by downloading and running <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a> from <a href="https://cran.r-project.org/index.html">CRAN</a>. 
+
+* **Linux** You can download the binary files for your distribution from CRAN(https://cran.r-project.org/index.html). Or you can use your package manager (e.g. for Debian/Ubuntu run `sudo apt-get install r-base` and for Fedora run `sudo dnf install R`). 
+
+
+**Installation notes**:
+
+* Default settings are OK. 
+* Delete any desktop shortcut that was created
+  
+</details> 
+
+<br>
+
+<details>
+  <summary>R Studio (Both workshops)</summary>
+
+To interact with R, we use the _Integrated Development Environment (IDE)_ called **RStudio** (https://www.rstudio.com). The R Studio IDE is installed _after_ you have installed R. 
+
+* Download R Studio (v 1.2+) from https://www.rstudio.com/products/rstudio/download/#download
+    - Choose the download link that corresponds to your operating system. 
+
+* Install R Studio
+    * **Windows**: Double click on the downloaded file to run the installer program. 
+    * **Mac**: Double click on the downloaded file, then drag the R Studio Icon into your Applications folder. 
+    After you are done, eject the "Drive" that you downloaded by dragging it to your trash. 
+
+* (Optional) Here is a short video shows you how to navigate R Studio: https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij
+
+**Setting preferences in R Studio to retain sanity while debugging**
+
+* Open R Studio and go to the file menu go to Tools then Global Options.
+* Uncheck "Restore .RData into workspace at startup" 
+* Where it says "Save workspace to .RData on exit:" Select "Never"
+* Click apply then ok to close that window.
+  
+This will ensure that when you restart R you do not "carry forward" objects such as data sets that you were working on in a prior assignment. 
+
+You should make a habit to completely shut down R studio when you are done working. 
+Your open tabs will be saved, but your environment will be cleared. _This is a good thing._
+
+
+</details> 
+
+<br>
+
+<details>
+  <summary>R Packages (Both workshops)</summary>
+
+R is considered an **Open Source** software program. That means many (thousands) of people contribute to the software. They do this by writing commands (called functions) to make a particular analysis easier, or to make a graphic prettier.
+
+When you download R, you get access to a lot of functions that we will use. However these other _user-written_ packages add so much good stuff that it really is the backbone of the customizability and functionality that makes R so powerful of a language. 
+
+> You only have to install packages once per R installation.  
+
+To get started type in the **console** the following command to install the `rmarkdown` package. 
+
+```r
+install.packages("rmarkdown")
+```
+
+When the console returns to showing a `>` (and the stop sign in the top right corner of the Console window goes away), R is done doing what you asked it to do and ready for you to give it another command. You should get a message that looks similar to the message below. 
+
+```
+The downloaded binary packages are in
+	C:\Users\Robin\AppData\Local\Temp\Rtmpi8NAym\downloaded_packages
+```
+
+Some packages use functions that live in other packages. These are called dependencies and will be automatically installed when you tell R to install a new package. 99% of the time you will not have to install them manually on your own. 
+
+
+Now that you're a package installing pro, go ahead and install the following packages that pertain to your selected workshop. 
+
+
+`r emo::ji("book")` **Workshop 12: Reproducible Reports using R Markdown**
+
+* knitr
+* rmarkdown
+* ggplot2 
+* kable
+* pander
+
+
+`r emo::ji("globe")` **Workshop 13: Website building**
+
+* knitr
+* rmarkdown
+* devtools 
+* blogdown 
+
+
+<span style="color:red">R is case sensitive. If you see a message such as the one below, check for a typo.</span>
+
+```
+Warning in install.packages :
+  package ‘ggplot’ is not available (for R version 3.5.1)
+```
+
+The correct package name is `ggplot2`, not `ggplot`.
+
+</details>
+
+
+<br>
+
+<details>
+  <summary>LaTeX (Reproducible Research workshop only)</summary>
+
+To create a PDF directly from your source code you will have to install a lightweight version of $LaTeX$ (a document processing program). This allows you to make professional looking reports. 
+
+Run the following code lines one at a time, waiting for the first one to finish before starting the next. This process can take up to 10 minutes. 
+```{r, eval=FALSE}
+install.packages("tinytex")
+tinytex::install_tinytex()
+```
+
+If at any time it asks you to update or install any other packages, say yes to all of them. 
+
+</details> 
+
+
+<br>
+
+<details>
+  <summary>Git & GitHub (Website building workshop only)</summary>
+  
+Git is a version control system that lets you track who made changes to what when and has options for easily updating a shared or public version of your code on https://github.com. 
+
+**Instructions to install Git can be found at** https://www.atlassian.com/git/tutorials/install-git
+
+  
+To share your code and publish your website you will also need a GitHub account at https://github.com. Basic GitHub accounts are free. We encourage you to create a GitHub account prior to the workshop if you don't have one already. Please consider what personal information you'd like to reveal. For example, you may want to review [these instructions for keeping your email address private](https://help.github.com/articles/keeping-your-email-address-private/) provided at GitHub.
+
+> Note: This workshop is not an lesson on git. We will use git to do a few things and we will interact with GitHub, but we will not go into details about version control. 
+
+</details> 
+
+
+<br>
+
+<details>
+  <summary>Hugo (Website building workshop only)</summary>
+  
+Hugo (https://gohugo.io) is a static site generator, that is used by the R package `blogdown` to create dynamic websites. `blogdown` has a helper function to do this installation for us. 
+
+```{r, eval=FALSE}
+blogdown::install_hugo()
+```
+
+</details> 

@@ -23,47 +23,6 @@ _This page was last updated `r format(Sys.time(), "%a %b %d")`._
 * Download and compile a starter website based on blogdown. 
 
 
-# Software Setup
-To participate in this workshop, you will need the software described below. 
-In addition, you will need an up-to-date web browser.
-
-
-### Git & GitHub
-
-Git is a version control system that lets you track who made changes to what when and has options for easily updating a shared or public version of your code on https://github.com. 
-
-**Instructions to install Git can be found at** https://www.atlassian.com/git/tutorials/install-git
-
-  
-To share your code and publish your website you will also need a GitHub account at https://github.com. Basic GitHub accounts are free. We encourage you to create a GitHub account prior to the workshop if you don't have one already. Please consider what personal information you'd like to reveal. For example, you may want to review [these instructions for keeping your email address private](https://help.github.com/articles/keeping-your-email-address-private/) provided at GitHub.
-
-> Note: This workshop is not an lesson on git. We will use git to do a few things and we will interact with GitHub, but we will not go into details about version control. 
-
-
-### R & R Studio
-
-[R](https://www.r-project.org) is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. 
-
-* **Windows** ([Video Tutorial](https://www.youtube.com/watch?v=q0PjTAylwoU)). Install R by downloading and running [this .exe file](https://cran.r-project.org/bin/windows/base/release.htm) from CRAN(https://cran.r-project.org/index.html).
-
-* **macOS** ([Video Tutorial](https://www.youtube.com/watch?v=5-ly3kyxwEg)). Install R by downloading and running <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a> from <a href="https://cran.r-project.org/index.html">CRAN</a>. 
-
-* **Linux** You can download the binary files for your distribution from CRAN(https://cran.r-project.org/index.html). Or you can use your package manager (e.g. for Debian/Ubuntu run `sudo apt-get install r-base` and for Fedora run `sudo dnf install R`). 
-
-#### R Studio
-To interact with R, we use the _Integrated Development Environment (IDE)_ [RStudio](https://www.rstudio.com). After you have R installed, please install the [RStudio IDE](https://www.rstudio.com/products/rstudio/download/#download). Note that if you have separate user and admin accounts, you should run the installers as administrator (right-click on .exe file and select "Run as administrator" instead of double-clicking). Otherwise problems may occur later, for example when installing R packages.
-
-
-> This also isn't a workshop on how to use R. Most of what we will do won't even be in the R language. However we will still use R Studio for ease of integration with GitHub, project management, and the integration of R code and markdown to produce webpages like the one you are looking at now. 
-
-
-## R packages 
-
-* knitr
-* Rmarkdown
-* devtools (for the advanced site)
-* blogdown (for the advanced site)
-
 ----
 
 # Getting started: Basic Site
@@ -153,6 +112,14 @@ An HTML file should now appear in your viewer pane.
     - Code files in sub-folders will not be automatically rendered. 
 * You can re-render individual files by clicking 'Knit'. 
 * You can leave this browser window open as you work, refreshing the page to see new changes. 
+* There are some basic themes you can app
+
+```
+output:
+  html_document:
+    theme: readable
+    highlight: pygments
+```    
 
 > Try this now: Make a change to your `index.Rmd`, knit and refresh your browser window. 
  
@@ -225,11 +192,6 @@ git push
 
 # Next phase: Blog Aware
 
-Hugo (https://gohugo.io) is a static site generator, that is used by the R package `blogdown` to create dynamic websites. `blogdown` has a helper function to do this installation for us. 
-
-```{r, eval=FALSE}
-blogdown::install_hugo()
-```
 
 > _In Progress_
 

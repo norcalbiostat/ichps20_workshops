@@ -10,7 +10,10 @@ navbar:
       icon: fa-globe
       href: website.html
   right:
-    - text: "Questions/Comments"
+    - text: "Setup"
+      icon: fa-gear
+      href: setup.html
+    - text: "Contact"
       icon: fa-question
       href: mailto:rdonatello@csuchico.edu 
       

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Software Setup</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 66px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h2 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h3 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h4 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h5 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.section h6 {
+  padding-top: 71px;
+  margin-top: -71px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">ICHPS 2020</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="report.html">
+    <span class="fa fa-book"></span>
+     
+    Reproducible Reports
+  </a>
+</li>
+<li>
+  <a href="website.html">
+    <span class="fa fa-globe"></span>
+     
+    Build your own Website
+  </a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="setup.html">
+    <span class="fa fa-gear"></span>
+     
+    Setup
+  </a>
+</li>
+<li>
+  <a href="mailto:rdonatello@csuchico.edu">
+    <span class="fa fa-question"></span>
+     
+    Contact
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Software Setup</h1>
+
+</div>
+
+
+<p><br></p>
+<p>To participate in either of these workshops, you will need a laptop with a user account that has software installation privileges to install the software described below. <em>Note that if you have separate user and admin accounts, you should run the installers as administrator (right-click on .exe file and select “Run as administrator” instead of double-clicking). Otherwise problems may occur later, for example when installing R packages.</em></p>
+<p>In addition, you will need an up-to-date web browser.</p>
+<p>To make best use of the workshop time please have the necessary programs and R packages installed prior to the start of the workshop. If you have any questions, click the <em>Contact</em> link in the top right of this website to email the workshop organizer.</p>
+<p>Click the arrows to expand the section to show installation and setup instructions for each program.</p>
+<hr />
+<details>
+<p><summary><font size="3">R (Both workshops)</font></summary></p>
+<p><strong>R</strong> is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. The project website is <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a>.</p>
+<ul>
+<li><p><strong>Windows</strong> (<a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>). Install R by downloading and running <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a> from CRAN(<a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>).</p></li>
+<li><p><strong>macOS</strong> (<a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>). Install R by downloading and running <a href="https://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a> from <a href="https://cran.r-project.org/index.html">CRAN</a>.</p></li>
+<li><p><strong>Linux</strong> You can download the binary files for your distribution from CRAN(<a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>). Or you can use your package manager (e.g. for Debian/Ubuntu run <code>sudo apt-get install r-base</code> and for Fedora run <code>sudo dnf install R</code>).</p></li>
+</ul>
+<p><strong>Installation notes</strong>:</p>
+<ul>
+<li>Default settings are OK.</li>
+<li>Delete any desktop shortcut that was created</li>
+</ul>
+</details>
+<p><br></p>
+<details>
+<p><summary>R Studio (Both workshops)</summary></p>
+<p>To interact with R, we use the <em>Integrated Development Environment (IDE)</em> called <strong>RStudio</strong> (<a href="https://www.rstudio.com" class="uri">https://www.rstudio.com</a>). The R Studio IDE is installed <em>after</em> you have installed R.</p>
+<ul>
+<li>Download R Studio (v 1.2+) from <a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a>
+<ul>
+<li>Choose the download link that corresponds to your operating system.</li>
+</ul></li>
+<li>Install R Studio
+<ul>
+<li><strong>Windows</strong>: Double click on the downloaded file to run the installer program.</li>
+<li><strong>Mac</strong>: Double click on the downloaded file, then drag the R Studio Icon into your Applications folder. After you are done, eject the “Drive” that you downloaded by dragging it to your trash.</li>
+</ul></li>
+<li>(Optional) Here is a short video shows you how to navigate R Studio: <a href="https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij" class="uri">https://www.rstudio.com/products/RStudio/?wvideo=520zbd3tij</a></li>
+</ul>
+<p><strong>Setting preferences in R Studio to retain sanity while debugging</strong></p>
+<ul>
+<li>Open R Studio and go to the file menu go to Tools then Global Options.</li>
+<li>Uncheck “Restore .RData into workspace at startup”</li>
+<li>Where it says “Save workspace to .RData on exit:” Select “Never”</li>
+<li>Click apply then ok to close that window.</li>
+</ul>
+<p>This will ensure that when you restart R you do not “carry forward” objects such as data sets that you were working on in a prior assignment.</p>
+<p>You should make a habit to completely shut down R studio when you are done working. Your open tabs will be saved, but your environment will be cleared. <em>This is a good thing.</em></p>
+</details>
+<p><br></p>
+<details>
+<p><summary>R Packages (Both workshops)</summary></p>
+<p>R is considered an <strong>Open Source</strong> software program. That means many (thousands) of people contribute to the software. They do this by writing commands (called functions) to make a particular analysis easier, or to make a graphic prettier.</p>
+<p>When you download R, you get access to a lot of functions that we will use. However these other <em>user-written</em> packages add so much good stuff that it really is the backbone of the customizability and functionality that makes R so powerful of a language.</p>
+<blockquote>
+<p>You only have to install packages once per R installation.</p>
+</blockquote>
+<p>To get started type in the <strong>console</strong> the following command to install the <code>rmarkdown</code> package.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</a></code></pre></div>
+<p>When the console returns to showing a <code>&gt;</code> (and the stop sign in the top right corner of the Console window goes away), R is done doing what you asked it to do and ready for you to give it another command. You should get a message that looks similar to the message below.</p>
+<pre><code>The downloaded binary packages are in
+    C:\Users\Robin\AppData\Local\Temp\Rtmpi8NAym\downloaded_packages</code></pre>
+<p>Some packages use functions that live in other packages. These are called dependencies and will be automatically installed when you tell R to install a new package. 99% of the time you will not have to install them manually on your own.</p>
+<p>Now that you’re a package installing pro, go ahead and install the following packages that pertain to your selected workshop.</p>
+<p>📖 <strong>Workshop 12: Reproducible Reports using R Markdown</strong></p>
+<ul>
+<li>knitr</li>
+<li>rmarkdown</li>
+<li>ggplot2</li>
+<li>kable</li>
+<li>pander</li>
+</ul>
+<p>🌏 <strong>Workshop 13: Website building</strong></p>
+<ul>
+<li>knitr</li>
+<li>rmarkdown</li>
+<li>devtools</li>
+<li>blogdown</li>
+</ul>
+<p><span style="color:red">R is case sensitive. If you see a message such as the one below, check for a typo.</span></p>
+<pre><code>Warning in install.packages :
+  package ‘ggplot’ is not available (for R version 3.5.1)</code></pre>
+<p>The correct package name is <code>ggplot2</code>, not <code>ggplot</code>.</p>
+</details>
+<p><br></p>
+<details>
+<p><summary>LaTeX (Reproducible Research workshop only)</summary></p>
+<p>To create a PDF directly from your source code you will have to install a lightweight version of <span class="math inline">\(LaTeX\)</span> (a document processing program). This allows you to make professional looking reports.</p>
+<p>Run the following code lines one at a time, waiting for the first one to finish before starting the next. This process can take up to 10 minutes.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;tinytex&quot;</span>)</a>
+<a class="sourceLine" id="cb4-2" title="2">tinytex<span class="op">::</span><span class="kw">install_tinytex</span>()</a></code></pre></div>
+<p>If at any time it asks you to update or install any other packages, say yes to all of them.</p>
+</details>
+<p><br></p>
+<details>
+<p><summary>Git &amp; GitHub (Website building workshop only)</summary></p>
+<p>Git is a version control system that lets you track who made changes to what when and has options for easily updating a shared or public version of your code on <a href="https://github.com" class="uri">https://github.com</a>.</p>
+<p><strong>Instructions to install Git can be found at</strong> <a href="https://www.atlassian.com/git/tutorials/install-git" class="uri">https://www.atlassian.com/git/tutorials/install-git</a></p>
+<p>To share your code and publish your website you will also need a GitHub account at <a href="https://github.com" class="uri">https://github.com</a>. Basic GitHub accounts are free. We encourage you to create a GitHub account prior to the workshop if you don’t have one already. Please consider what personal information you’d like to reveal. For example, you may want to review <a href="https://help.github.com/articles/keeping-your-email-address-private/">these instructions for keeping your email address private</a> provided at GitHub.</p>
+<blockquote>
+<p>Note: This workshop is not an lesson on git. We will use git to do a few things and we will interact with GitHub, but we will not go into details about version control.</p>
+</blockquote>
+</details>
+<p><br></p>
+<details>
+<p><summary>Hugo (Website building workshop only)</summary></p>
+<p>Hugo (<a href="https://gohugo.io" class="uri">https://gohugo.io</a>) is a static site generator, that is used by the R package <code>blogdown</code> to create dynamic websites. <code>blogdown</code> has a helper function to do this installation for us.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">blogdown<span class="op">::</span><span class="kw">install_hugo</span>()</a></code></pre></div>
+</details>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
