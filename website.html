@@ -27,6 +27,97 @@
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
 
 <style type="text/css">
@@ -359,7 +450,7 @@ div.tocify {
   <a href="mailto:rdonatello@csuchico.edu">
     <span class="fa fa-question"></span>
      
-    Questions/Comments
+    Contact
   </a>
 </li>
       </ul>
@@ -393,7 +484,7 @@ div.tocify {
 <h1>Getting started: Basic Site</h1>
 <p>R Markdown websites like this one can be built with a minimum of two files: a <code>_site.yml</code> and an <code>index.Rmd</code>.</p>
 <p>The <code>_site.yml</code> file controls the overall structure of the website, such as the order of the navigation bar and the color theme.</p>
-<p>When these files are <em>rendered</em> into HTML files, they can be hosted on GitHub for free. Then after turning on a few settings in your GitHub repository (repo) these files can be viewed as a magnificant webpage.</p>
+<p>When these files are <em>rendered</em> into HTML files, they can be hosted on GitHub for free. Then after turning on a few settings in your GitHub repository (repo) these files can be viewed as a magnificent webpage.</p>
 <p>We are going to employ the “<a href="https://happygitwithr.com/new-github-first.html">GitHub first, R Studio second</a>” approach.</p>
 <div id="create-a-public-github-repo." class="section level3">
 <h3>1. Create a public Github repo.</h3>
@@ -402,7 +493,7 @@ div.tocify {
 </li>
 <li>(<em>Suggestion</em>): Name this repo something like <code>ichps_website</code> so you know it’s a playground.</li>
 <li>keep it a PUBLIC repo</li>
-<li>YES initalize with a README</li>
+<li>YES initialize with a README</li>
 </ul>
 <p>Click ‘Create Repository’ to finish, but keep this page open. We’ll come back to it a few times.</p>
 </div>
@@ -415,7 +506,7 @@ div.tocify {
 <li>Click the clipboard icon to copy the URL to your repo.</li>
 <li>Paste this URL into the <em>Repository URL</em> box in R Studio.
 <ul>
-<li><strong>(<em>Strongly Suggestested</em>)</strong>: Name this project the same as the repo name.</li>
+<li><strong>(<em>Strongly Suggested</em>)</strong>: Name this project the same as the repo name.</li>
 <li>Subdirectory: Your path, your choice. Just don’t put a repo inside a repo.</li>
 </ul></li>
 </ul></li>
@@ -554,18 +645,125 @@ git push</code></pre>
 <ul>
 <li>Refresh your live webpage on GitHub to see the results!</li>
 </ul>
+</div>
+<div id="examples" class="section level3">
+<h3>Examples</h3>
+<ul>
+<li>Course webpage for an Applied Statistics class at CSU, Chico <a href="https://norcalbiostat.github.io/MATH315/index.html" class="uri">https://norcalbiostat.github.io/MATH315/index.html</a></li>
+<li>Project webpage <a href="https://norcalbiostat.github.io/chem_ss/" class="uri">https://norcalbiostat.github.io/chem_ss/</a></li>
+<li>Personal website: <a href="http://www.emilyzabor.com/index.html" class="uri">http://www.emilyzabor.com/index.html</a></li>
+</ul>
 <hr />
 </div>
 </div>
 <div id="next-phase-blog-aware" class="section level1">
 <h1>Next phase: Blog Aware</h1>
+<p>The “simple” website that was built above can be extended and enhanced well enough with some CSS and Rmarkdown wizardry. However, sometimes you may want a little more of a ‘modern’, ‘dynamic’ or ‘responsive’ feel, or to include a blog in your website. Here are some examples:</p>
+<ul>
+<li><a href="https://georgecushen.com/" class="uri">https://georgecushen.com/</a></li>
+<li><a href="https://chicodatafest.netlify.com/" class="uri">https://chicodatafest.netlify.com/</a></li>
+<li><a href="http://datascience.csuchico.edu/" class="uri">http://datascience.csuchico.edu/</a></li>
+</ul>
+<p>This is when we enter the realm of <a href="https://gohugo.io/">[Hugo]</a>, - the self proclaimed “most popular open-source static site generator”.</p>
+<p>Hugo is it’s own language, and for advanced usage of Hugo-based websites, some understanding of how Hugo works and reading <em>those</em> docs may be required.</p>
+<p>For now, we are just going to show you how to get started in this realm of fancy-ness using the R package <code>blogdown</code>. Then you can go break it later. The super official blogdown documentation is linked in the References section at the bottom of this page.</p>
+<p>If you did not do so beforehand, install the <code>blogdown</code> package, and use it to install Hugo using <code>blogdown::install_hugo()</code>.</p>
+<div id="create-a-new-github-repo-and-connect-it-to-an-r-project." class="section level3">
+<h3>1. Create a new Github Repo and connect it to an R Project.</h3>
+<p>This is step 1 and 2 from the first part of this workshop.</p>
+</div>
+<div id="create-a-new-site-with-a-specified-theme" class="section level3">
+<h3>2. Create a new site with a specified theme</h3>
+<p>The <code>blogdown</code> package will setup the necessary files, folder structures and theme files from a pre-specified them that is available on github. The example we will start with below is from the github user <code>gcushen</code>, and the repository name is <code>hugo-academic</code>. We are also specifying that we want to see the example site provided by the theme author. This is highly recommended, after all we learn by copying and modifying!</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">blogdown<span class="op">::</span><span class="kw">new_site</span>(<span class="dt">theme=</span><span class="st">&#39;gcushen/hugo-academic&#39;</span>, <span class="dt">theme_example=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<p>This could take up to a minute to download all necessary files.</p>
+<p>When it is done, your website will be rendered and appear in the bottom right viewer pane. Click the ‘Show in new window’ to open it in your full browser. The example site is a demo, so it may be a bit overwhelming at first. We’ll work quickly to trim it down to something a bit more manageable.</p>
+</div>
+<div id="explore-configuration-files." class="section level3">
+<h3>3. Explore configuration files.</h3>
+<p>Let’s start by looking at the files that are contained in the root folder of this project.</p>
+<ul>
+<li><code>config.toml</code>: Functions similar to the <code>_site.yml</code> file, but with a LOT of options and comments.
+<ul>
+<li>We won’t work on this one just yet.</li>
+</ul></li>
+<li><code>index.Rmd</code>: There’s nothing here!</li>
+</ul>
+<p>This is one of the primary differences between this type of site building and the one we just finished. Content is handled in a very different manner. Hugo + Blogdown aim to help you focus on content creation and these programs put the pieces together for you. Think of each piece of content (each “pane” or “window” on the demo site) as a “widget” that can configured individually and put together in your own style.</p>
+</div>
+<div id="explore-content-files-and-simplify-the-site-to-start." class="section level3">
+<h3>4. Explore content files and simplify the site to start.</h3>
+<ul>
+<li>Open the <code>content/home</code> folder. Each one of these markdown (<code>.md</code>) files controls one piece of content.</li>
+<li>Open the <code>demo.md</code> file.
+<ul>
+<li>Flip back to the browser site and make sure you can identify which piece of content that this file controls.</li>
+<li>Turn this section off by setting <code>active=false</code> on line 8.</li>
+<li>Save this file, then go back to your browser and refresh the page. Notice it automatically updates the page (Live Preview).</li>
+</ul></li>
+<li>Turn off the following pages:
+<ul>
+<li>contact</li>
+<li>accomplishments</li>
+<li>hero</li>
+<li>featured</li>
+<li>experiencee</li>
+<li>gallery/index.md</li>
+</ul></li>
+</ul>
+<p>We won’t have time to go through them all, and each theme is slightly different in how it manages content. Reading the theme documentation is essential. The above pages were chosen to turn off so we can focus on the basics for now.</p>
+</div>
+<div id="start-to-modify-little-by-little." class="section level3">
+<h3>5. Start to modify little by little.</h3>
+<p>The order content appears is controlled by the <code>weight</code> option - lower numbers are at the top. E.g. Default numbers are projects at 65, posts at 60, and skills at 30.</p>
+<ul>
+<li>Set the weight of <code>skills.md</code> to 68, so it shows up after projects.</li>
+</ul>
+</div>
+<div id="x.-blog-posts" class="section level3">
+<h3>X. Blog posts</h3>
+<p>On your newly updated website, clicking on one of the posts opens that page in full page view. This is what your readers will see.</p>
+<p>The <code>home/posts.md</code> page controls the appearance of this section, but the content itself is in another location.</p>
+<ul>
+<li>Open this file and make the following modifications and see the live changes.
+<ul>
+<li>Under the <code>[content]</code> section, change <code>count=3</code> to show only 3 posts.</li>
+<li>Under the <code>[design]</code> section, change the <code>view</code> option to another number.</li>
+</ul></li>
+</ul>
+<p>The content files for posts are stored under <code>content/post/</code> folder. If you look there now you’ll see some folders, a <code>.Rmd</code> file with it’s associated <code>.html</code> output, and an <code>_index.md</code> file.</p>
+<p><strong>Creating new blog posts</strong></p>
+<ul>
+<li>Option 1: Copy the layout/format of one of the example files already in this folder</li>
+<li>Option 2: Use the R Studio Addins to setup the page structure for you.
+<ul>
+<li><strong>This is the one we’re going to use</strong></li>
+<li>This will likely require you to install and/or update new packages including (but not limited to) <code>fastmap</code>, <code>miniUI</code>, <code>htmltools</code>, <code>shiny</code>.</li>
+<li>If you run into seemingly endless package installation loops, restart RStudio and re-try.</li>
+</ul></li>
+</ul>
+<p>Using the UI allows you to easily set catgories, tags and the like.</p>
+<ul>
+<li>Select the <code>.Rmd</code> format.</li>
+</ul>
+<p>HUGE YAML header material. Lots to customize here if you so choose. Content goes below the header, starting around line 19.</p>
 <blockquote>
 <p><em>In Progress</em></p>
 </blockquote>
+</div>
+<div id="x.-navigation-bar" class="section level3">
+<h3>X. Navigation bar</h3>
+</div>
+<div id="closing-comments" class="section level3">
+<h3>Closing comments</h3>
+<ul>
+<li>Hugo has a TON of themes: <a href="https://themes.gohugo.io/" class="uri">https://themes.gohugo.io/</a> . Not all work with <code>blogdown</code>, and not all are easy to work with. Here is a blog post by Peter Baumgartner on <a href="https://portfolio.peter-baumgartner.net/2018/07/19/blogdown-using-themes/">important thoughts on choosing a theme to work with</a>.</li>
+</ul>
 <hr />
 </div>
-<div id="references" class="section level1">
-<h1>References</h1>
+</div>
+<div id="read-the-docs-references" class="section level1">
+<h1>Read the Docs (References)</h1>
 <ul>
 <li>Github
 <ul>
@@ -581,6 +779,7 @@ git push</code></pre>
 <li>Blog aware sites
 <ul>
 <li><code>blogdown</code>: Creating Websites with R Markdown <a href="https://bookdown.org/yihui/blogdown/" class="uri">https://bookdown.org/yihui/blogdown/</a> , <a href="https://github.com/rstudio/blogdown" class="uri">https://github.com/rstudio/blogdown</a></li>
+<li>Getting started with the Academic theme: <a href="https://sourcethemes.com/academic/docs/get-started/" class="uri">https://sourcethemes.com/academic/docs/get-started/</a></li>
 </ul></li>
 </ul>
 </div>

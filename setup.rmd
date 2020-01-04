@@ -174,3 +174,24 @@ blogdown::install_hugo()
 ```
 
 </details> 
+
+
+<br>
+
+<details>
+  <summary>[OPTIONAL] Create a Netlify account (Website building workshop only)</summary>
+
+The blog-aware website that we will be building needs to be hosted somewhere other than GitHub.
+For beginners, it is recommended to use Netlify for the following reasons
+
+* free
+* easy setup/ beginner friendly
+* lots of useful features
+* somewhat customizable URL
+
+You can sign up and make an account at https://www.netlify.com/
+
+More info/options about deploying/hosting `blogdown` websites: https://bookdown.org/yihui/blogdown/deployment.html
+
+
+</details> 

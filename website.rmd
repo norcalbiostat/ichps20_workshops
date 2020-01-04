@@ -31,7 +31,7 @@ R Markdown websites like this one can be built with a minimum of two files: a `_
 
 The `_site.yml` file controls the overall structure of the website, such as the order of the navigation bar and the color theme. 
 
-When these files are _rendered_ into HTML files, they can be hosted on GitHub for free. Then after turning on a few settings in your GitHub repository (repo) these files can be viewed as a magnificant webpage. 
+When these files are _rendered_ into HTML files, they can be hosted on GitHub for free. Then after turning on a few settings in your GitHub repository (repo) these files can be viewed as a magnificent webpage. 
 
 We are going to employ the "[GitHub first, R Studio second](https://happygitwithr.com/new-github-first.html)" approach. 
 
@@ -39,7 +39,7 @@ We are going to employ the "[GitHub first, R Studio second](https://happygitwith
 * From your *Repository* page, click the green <span style="color:green">[NEW]</span> button.  
 * (_Suggestion_): Name this repo something like `ichps_website` so you know it's a playground.
 * keep it a PUBLIC repo
-* YES initalize with a README
+* YES initialize with a README
 
 Click 'Create Repository' to finish, but keep this page open. We'll come back to it a few times.
 
@@ -48,7 +48,7 @@ Click 'Create Repository' to finish, but keep this page open. We'll come back to
 * Go back to GitHub, and click on the green <span style="color:green">[Clone or Download]</span> button.
   - Click the clipboard icon to copy the URL to your repo. 
   - Paste this URL into the _Repository URL_ box in R Studio. 
-    * **(_Strongly Suggestested_)**: Name this project the same as the repo name.
+    * **(_Strongly Suggested_)**: Name this project the same as the repo name.
     * Subdirectory: Your path, your choice. Just don't put a repo inside a repo. 
 * Click _Create Project_
 
@@ -188,16 +188,142 @@ git push
 
 * Refresh your live webpage on GitHub to see the results! 
 
+
+### Examples
+
+* Course webpage for an Applied Statistics class at CSU, Chico https://norcalbiostat.github.io/MATH315/index.html
+* Project webpage https://norcalbiostat.github.io/chem_ss/
+* Personal website: http://www.emilyzabor.com/index.html
+
+
 ----
 
 # Next phase: Blog Aware
 
+The "simple" website that was built above can be extended and enhanced well enough with some CSS and Rmarkdown wizardry. However, sometimes you may want a little more of a 'modern', 'dynamic' or 'responsive' feel, or to include a blog in your website. Here are some examples:  
+
+* https://georgecushen.com/
+* https://chicodatafest.netlify.com/
+* http://datascience.csuchico.edu/
+
+
+This is when we enter the realm of [[Hugo]](https://gohugo.io/), - the self proclaimed "most popular open-source static site generator". 
+
+Hugo is it's own language, and for advanced usage of Hugo-based websites, some understanding of how Hugo works and reading _those_ docs may be required. 
+
+For now, we are just going to show you how to get started in this realm of fancy-ness using the R package `blogdown`. Then you can go break it later. The super official blogdown documentation is linked in the References section at the bottom of this page.  
+
+If you did not do so beforehand, install the `blogdown` package, and use it to install Hugo using `blogdown::install_hugo()`. 
+
+### 1. Create a new Github Repo and connect it to an R Project. 
+
+This is step 1 and 2 from the first part of this workshop. 
+
+### 2. Create a new site with a specified theme
+
+The `blogdown` package will setup the necessary files, folder structures and theme files from a pre-specified them that is available on github. The example we will start with below is from the github user `gcushen`, and the repository name is `hugo-academic`. We are also specifying that we want to see the example site provided by the theme author. This is highly recommended, after all we learn by copying and modifying!
+
+
+```{r, eval=FALSE}
+blogdown::new_site(theme='gcushen/hugo-academic', theme_example=TRUE)
+```
+
+This could take up to a minute to download all necessary files. 
+
+When it is done, your website will be rendered and appear in the bottom right viewer pane. Click the 'Show in new window' to open it in your full browser. The example site is a demo, so it may be a bit overwhelming at first. We'll work quickly to trim it down to something a bit more manageable. 
+
+
+### 3. Explore configuration files. 
+Let's start by looking at the files that are contained in the root folder of this project. 
+
+* `config.toml`: Functions similar to the `_site.yml` file, but with a LOT of options and comments.
+    - We won't work on this one just yet. 
+* `index.Rmd`: There's nothing here! 
+
+This is one of the primary differences between this type of site building and the one we just finished. Content is handled in a very different manner. Hugo + Blogdown aim to help you focus on content creation and these programs put the pieces together for you. Think of each piece of content (each "pane" or "window" on the demo site) as a "widget" that can configured individually and put together in your own style. 
+
+### 4. Explore content files and simplify the site to start. 
+
+* Open the `content/home` folder. Each one of these markdown (`.md`) files controls one piece of content. 
+* Open the `demo.md` file. 
+    - Flip back to the browser site and make sure you can identify which piece of content that this file controls. 
+    - Turn this section off by setting `active=false` on line 8.
+    - Save this file, then go back to your browser and refresh the page. Notice it automatically updates the page (Live Preview).
+    
+* Turn off the following pages: 
+  - contact
+  - accomplishments
+  - hero
+  - featured
+  - experiencee
+  - gallery/index.md
+  
+We won't have time to go through them all, and each theme is slightly different in how it manages content. Reading the theme documentation is essential. The above pages were chosen to turn off so we can focus on the basics for now. 
+
+### 5. Start to modify little by little. 
+
+The order content appears is controlled by the `weight` option - lower numbers are at the top. E.g. Default numbers are projects at 65, posts at 60, and skills at 30. 
+
+* Set the weight of `skills.md` to 68, so it shows up after projects. 
+
+
+### X. Blog posts
+
+On your newly updated website, clicking on one of the posts opens that page in full page view. This is what your readers will see. 
+
+The `home/posts.md` page controls the appearance of this section, but the content itself is in another location. 
+
+* Open this file and make the following modifications and see the live changes. 
+    - Under the `[content]` section, change `count=3` to show only 3 posts. 
+    - Under the `[design]` section, change the `view` option to another number. 
+
+The content files for posts are stored under `content/post/` folder. If you look there now you'll see some folders, a `.Rmd` file with it's associated `.html` output, and an `_index.md` file. 
+
+**Creating new blog posts**
+
+* Option 1: Copy the layout/format of one of the example files already in this folder
+* Option 2: Use the R Studio Addins to setup the page structure for you. 
+    - **This is the one we're going to use**
+    - This will likely require you to install and/or update new packages including (but not limited to) 
+    `fastmap`, `miniUI`, `htmltools`, `shiny`. 
+    - If you run into seemingly endless package installation loops, restart RStudio and re-try. 
+    
+Using the UI allows you to easily set catgories, tags and the like. 
+
+* Select the `.Rmd` format. 
+
+HUGE YAML header material. Lots to customize here if you so choose. 
+Content goes below the header, starting around line 19. 
+
+
 
 > _In Progress_
 
+
+
+
+
+  
+
+
+
+
+### X. Navigation  bar
+    
+
+
+
+
+
+
+
+### Closing comments
+
+* Hugo has a TON of themes: https://themes.gohugo.io/ . Not all work with `blogdown`, and not all are easy to work with. Here is a blog post by Peter Baumgartner on [important thoughts on choosing a theme to work with](https://portfolio.peter-baumgartner.net/2018/07/19/blogdown-using-themes/). 
+
 ----
 
-# References
+# Read the Docs (References)
 
 * Github
     * https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
@@ -210,3 +336,7 @@ git push
 
 * Blog aware sites 
     * `blogdown`: Creating Websites with R Markdown https://bookdown.org/yihui/blogdown/ , https://github.com/rstudio/blogdown 
+    * Getting started with the Academic theme: https://sourcethemes.com/academic/docs/get-started/
+    
+
+    
