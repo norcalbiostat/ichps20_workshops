@@ -36,6 +36,9 @@ When these files are _rendered_ into HTML files, they can be hosted on GitHub fo
 We are going to employ the "[GitHub first, R Studio second](https://happygitwithr.com/new-github-first.html)" approach. 
 
 ### 1. Create a public Github repo. 
+
+**Do together** 
+
 * From your *Repository* page, click the green <span style="color:green">[NEW]</span> button.  
 * (_Suggestion_): Name this repo something like `ichps_website` so you know it's a playground.
 * keep it a PUBLIC repo
@@ -44,6 +47,9 @@ We are going to employ the "[GitHub first, R Studio second](https://happygitwith
 Click 'Create Repository' to finish, but keep this page open. We'll come back to it a few times.
 
 ### 2. Create a project in R Studio and clone your new repo into this project. 
+
+**Do together** 
+
 * Top right corner in R Studio click: *New Project --> Checkout from version control --> Git*
 * Go back to GitHub, and click on the green <span style="color:green">[Clone or Download]</span> button.
   - Click the clipboard icon to copy the URL to your repo. 
@@ -54,12 +60,16 @@ Click 'Create Repository' to finish, but keep this page open. We'll come back to
 
 ### 3. Create necessary files in R Studio.
 
+**Do together** 
+
 * In the *Terminal* window (tab to the right of the *Console*), create the `_site.yml` and `index.Rmd` files using the `touch` command. Type the following commands in the Terminal one at a time, pressing <kbd>Return</kbd> or <kbd>Enter</kbd> after each line to execute. 
 ```
 touch _site.yml
 touch index.rmd
 ```
 You can view these files in the _File_ pane (lower left). You can open supported file types by clicking on the name of the file from this pane. 
+
+**Do together** 
 
 * Open both the `_site.yml` and `index.Rmd` files now. 
 
@@ -68,6 +78,8 @@ This is the file that controls your overall site's configuration. If you are fam
 
 YAML headers, and this file, are very particular about spacing and tabs. To avoid unnecessary grief we are going to copy/paste code from Chapter 10.5.1 of the [bookdown website](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html). 
 
+
+**Do together** 
 
 * Navigate to the bookdown website by clicking the link above. 
 * Mouse over the first code chunk in section 10.5.1, and click the _Copy to Clipboard_ icon in the top right corner. 
@@ -85,12 +97,16 @@ output_dir: "."
 
 This is your landing page. That is, the first page people see when they go to your website. You can add a title to this page using a YAML header as is shown in the bookdown website, or you can use a pound sign `#` as a first level header to make this title. 
 
+**Do together** 
+
 * Create a title for your page using *either* a YAML header or a `#` sign. Using both is redundant. 
 * Write a sentence or two welcoming your viewers to your website. 
 
 ### 6. Building & previewing your website locally. 
 
 Since we created the `.yml` file manually after creating the R Project, your project doesn't quite know yet that it has a website to build. 
+
+**Do together** 
 
 * Save your work and close down R studio. 
 * Navigate to your repository folder on your computer, and open the project by double clicking on the R project file icon (a cube with the letter R). 
@@ -121,11 +137,15 @@ output:
     highlight: pygments
 ```    
 
-> Try this now: Make a change to your `index.Rmd`, knit and refresh your browser window. 
+**Do together** 
+
+* Try this now. Make a change to your `index.Rmd`, knit and refresh your browser window. 
  
 ### 7. Push to GitHub & publish your website. 
 
 Let's get your test site up for the world to see. 
+
+**Do together** 
 
 * In the _Terminal_ window, stage and commit your files to version control by executing the following commands:
 
@@ -146,6 +166,7 @@ git push
 ```
 
 This will _push_ your changes up to GitHub's servers online. You may have to enter your github username and password here. See [happy git with R](https://happygitwithr.com/push-pull-github.html) for help storing your github credentials. 
+**Do together** 
 
 * Go back to your GitHub repo page and refresh - you should now see that your repo now contains the new code, and HTML files that you have been working on. 
 * Click _Settings_ in the top right of the navigation bar in your repository. 
@@ -164,6 +185,8 @@ After the page refreshes, you will see the URL to your website in at the top of 
 ### 8. Adding Content. 
 
 Let's add an example analysis project to showcase on our website. 
+
+**Do together** 
 
 * Go back to R Studio. 
     - Create a new R Markdown file using _File -> New R Markdown_ so we can get the example R Markdown content that includes a plot. 
@@ -221,105 +244,130 @@ This is step 1 and 2 from the first part of this workshop.
 
 ### 2. Create a new site with a specified theme
 
-The `blogdown` package will setup the necessary files, folder structures and theme files from a pre-specified them that is available on github. The example we will start with below is from the github user `gcushen`, and the repository name is `hugo-academic`. We are also specifying that we want to see the example site provided by the theme author. This is highly recommended, after all we learn by copying and modifying!
+The `blogdown` package will setup the necessary files, folder structures and theme files from a pre-specified them that is available on github. The example we will start with is a very simple site containing a few pages and a blog. 
 
 
 ```{r, eval=FALSE}
-blogdown::new_site(theme='gcushen/hugo-academic', theme_example=TRUE)
+blogdown::new_site(theme='yihui/hugo-lithium')
 ```
 
 This could take up to a minute to download all necessary files. 
 
-When it is done, your website will be rendered and appear in the bottom right viewer pane. Click the 'Show in new window' to open it in your full browser. The example site is a demo, so it may be a bit overwhelming at first. We'll work quickly to trim it down to something a bit more manageable. 
+When it is done, your website will be rendered and appear in the bottom right viewer pane. Click the 'Show in new window' to open it in your full browser. 
 
 
 ### 3. Explore configuration files. 
 Let's start by looking at the files that are contained in the root folder of this project. 
 
-* `config.toml`: Functions similar to the `_site.yml` file, but with a LOT of options and comments.
-    - We won't work on this one just yet. 
-* `index.Rmd`: There's nothing here! 
+* `index.Rmd`: Nothing really is there! This is one of the primary differences between this type of site building and the one we just finished. Content is handled in a very different manner. Hugo + Blogdown aim to help you focus on content creation and these programs put the pieces together for you.
 
-This is one of the primary differences between this type of site building and the one we just finished. Content is handled in a very different manner. Hugo + Blogdown aim to help you focus on content creation and these programs put the pieces together for you. Think of each piece of content (each "pane" or "window" on the demo site) as a "widget" that can configured individually and put together in your own style. 
+* `config.toml`: Functions similar to the `_site.yml` file, you can think of TOML as having the same functionality as the YAML, but with different syntax. TOML uses a key-value pair of options, such as
 
-### 4. Explore content files and simplify the site to start. 
+```
+title = "A Hugo website"
+```
 
-* Open the `content/home` folder. Each one of these markdown (`.md`) files controls one piece of content. 
-* Open the `demo.md` file. 
-    - Flip back to the browser site and make sure you can identify which piece of content that this file controls. 
-    - Turn this section off by setting `active=false` on line 8.
-    - Save this file, then go back to your browser and refresh the page. Notice it automatically updates the page (Live Preview).
-    
-* Turn off the following pages: 
-  - contact
-  - accomplishments
-  - hero
-  - featured
-  - experiencee
-  - gallery/index.md
-  
-We won't have time to go through them all, and each theme is slightly different in how it manages content. Reading the theme documentation is essential. The above pages were chosen to turn off so we can focus on the basics for now. 
+Areas of the website, like the menu (navbar), are controlled in sections that start with brackets and look like the following: 
 
-### 5. Start to modify little by little. 
+```
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+```
 
-The order content appears is controlled by the `weight` option - lower numbers are at the top. E.g. Default numbers are projects at 65, posts at 60, and skills at 30. 
+**Do together** 
 
-* Set the weight of `skills.md` to 68, so it shows up after projects. 
+* Remove the twitter link
+* Change the GitHub link to point to your GitHub account
+* Give your site a different title. 
+
+`r emo::ji("question")` Were you able to see the results of each of the changes you made on the live site? 
 
 
-### X. Blog posts
+### 4. Explore and modify static content files. 
 
-On your newly updated website, clicking on one of the posts opens that page in full page view. This is what your readers will see. 
+Open the `content` folder. Right now there is only an `about.md` file. **Open this file**. 
 
-The `home/posts.md` page controls the appearance of this section, but the content itself is in another location. 
+We see a familiar YAML header, and a body of text. 
 
-* Open this file and make the following modifications and see the live changes. 
-    - Under the `[content]` section, change `count=3` to show only 3 posts. 
-    - Under the `[design]` section, change the `view` option to another number. 
+**Do together** 
 
-The content files for posts are stored under `content/post/` folder. If you look there now you'll see some folders, a `.Rmd` file with it's associated `.html` output, and an `_index.md` file. 
+* Change the title and content. 
+* Save this file, go back to your local site and refresh the live preview to see the changes. 
+
+This folder is where we can add more static pages, such as a CV. Since we are not using any R code here, we can stick with the simpler markdown only file format. 
+
+**Do together** 
+
+* Copy the `about.md` file, rename this as `cv.md`. 
+  - You can do this in R Studio by clicking the box to the left of the file name in the Files window, then clicking _More --> Copy_
+* Change the title, add a few bullet points and save. 
+* Go back to the `config.toml` file, and add a new ``[[menu.main]]` section as shown below so that this link shows up in the navbar.
+
+```
+[[menu.main]]
+    name = "CV"
+    url = "/cv/"
+```
+
+
+### 5. Blog posts
+
+On your newly updated website, clicking on the icon in the top left. This will take you back to the landing page. For this theme, the landing page is a blog (instead of a static page such as `About`). Clicking on one of these posts takes you to the page that contains the post itself. 
+
+The content files for posts are stored under `content/post/` folder. If you look there now you'll see some markdown (`.md`), some R Markdown (`.Rmd`) files, and their associated `.html` output files. 
 
 **Creating new blog posts**
 
-* Option 1: Copy the layout/format of one of the example files already in this folder
+* Option 1: Copy/paste/modify one of the example files already in this folder. 
 * Option 2: Use the R Studio Addins to setup the page structure for you. 
     - **This is the one we're going to use**
-    - This will likely require you to install and/or update new packages including (but not limited to) 
+    - Using the UI allows you to easily set catgories, tags and the like. 
+    
+**Do together** 
+    
+* Click _Addins --> New Post_
+  - This will likely require you to install and/or update new packages including (but not limited to) 
     `fastmap`, `miniUI`, `htmltools`, `shiny`. 
-    - If you run into seemingly endless package installation loops, restart RStudio and re-try. 
-    
-Using the UI allows you to easily set catgories, tags and the like. 
+  - If you run into seemingly endless package installation loops, restart RStudio and re-try. 
+* Give your post a title, author name, a category and a tag. 
+    - Categories and tags are optional, but for this example go ahead and set them. 
+* Select the `.Rmd` format for this example. 
+* Select <kbd>Done</kbd>
 
-* Select the `.Rmd` format. 
+Let's do a quick analysis of the `cars` data set to add some simple content for display. 
 
-HUGE YAML header material. Lots to customize here if you so choose. 
-Content goes below the header, starting around line 19. 
+* Don't knit this file. Just save. 
 
-
-
-> _In Progress_
-
+_(Instructors note: Intro, summary, pander, sentence, plot, sentence, inline R, hide code)_
 
 
+### 6. Serve Site
+
+We've been "cheating" a little so far in that our site has already been "Served". 
+When we started the new site in step 2, not only did `blogdown` download the theme files and exmaple site, it also ran `blogdown::serve_site()`. This is what allows for the live preview. 
+
+At a later point when you want to come back to working on your website, opening the project file itself will not initiate a `serve_site()`. You will have to do this manually. Again, there is an **Addin** for this. 
+
+### 7. Push to GitHub. 
+
+Go ahead and save your work, add, commit, and push your content to your github account. 
 
 
-  
+### 8. Hosting / Deploying your website. 
 
+If you have your own server, and you are familiar with website deployment then you can roll your own as you are used to. For those of us that have absolutely no idea how to host a website, a very good option that is very user friendly (and free) is [Netlify](https://www.netlify.com/). 
 
+You *could* use GitHub Pages as we did previously to host a Hugo based website, but there are some tweaks that you have to do to get GitHub to work with/around Jekyll in the way Blogdown/Hugo builds the sites. If you want to learn more about the why's, go read the docs at https://bookdown.org/yihui/blogdown/deployment.html
 
-
-### X. Navigation  bar
-    
-
-
-
-
+**Do together (Time pending)**
 
 
 
 ### Closing comments
 
 * Hugo has a TON of themes: https://themes.gohugo.io/ . Not all work with `blogdown`, and not all are easy to work with. Here is a blog post by Peter Baumgartner on [important thoughts on choosing a theme to work with](https://portfolio.peter-baumgartner.net/2018/07/19/blogdown-using-themes/). 
+* The theme shown here has a very simple TOML configuration file. Each theme is different and unique. Reading the documentation (generally contained in the readme) is critical. 
 
 ----
 
