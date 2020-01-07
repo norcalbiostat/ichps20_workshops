@@ -34,13 +34,14 @@ _This workshop will walk you through a key package in R called `knitr`, that is 
 #### Pre-requisites
 * Prior knowledge of R is helpful, but not necessary. 
 
-#### Collaborative notes: 
+**Collaborative notes**:
 
 ----
 
 ## `r emo::ji("globe")` [Promote  yourself - make your own professional website without knowing HTML](website.html)
 #### Instructor: [Robin Donatello](www.norcalbiostat.com), California State University, Chico. rdonatello@csuchico.edu
-#### Helpers: Justin Williams, UCLA Biostatistics doctoral student. williazo@g.ucla.edu 
+#### Helpers: 
+* Justin Williams, UCLA Biostatistics doctoral student. williazo@g.ucla.edu 
 
 
 _Linkedin is great, your department or office website may have a bio on a page for you, but you need your own space to share your work. To demonstrate your talent, share recent projects or research, create and curate scientific content. Share your course lecture notes, blog about your recent research, or present analysis results in all their grisly detail as a supplement to a presentation or manuscript. This hands-on workshop will walk you through the process of creating two types of websites with no knowledge of HTML or CSS needed. The first type is a simple site that links a series of web pages you create using the Markdown language together into a website framework. This is ideal for a small project, such as presenting class materials, or an interactive dashboard. The second type of website is ideal for users who wish to write a blog or present a more “modern” feel to their website. This website uses the website generator Hugo, but again no knowledge of Hugo will be necessary. We will use the R studio environment to build these websites using Markdown, and demonstrations of how live code and output can be shown in these webpages, but no direct knowledge of R is required._
@@ -49,4 +50,4 @@ _Linkedin is great, your department or office website may have a bio on a page f
 * Basic/minimal knowledge of R, R Markdown, version control (e.g. git), GitHub
 
 
-#### Collaborative notes: https://hackmd.io/@norcalbiostat/ichps2020_website_notes
+**Collaborative notes**: https://hackmd.io/@norcalbiostat/ichps2020_website_notes
