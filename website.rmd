@@ -22,6 +22,7 @@ _This page was last updated `r format(Sys.time(), "%a %b %d")`._
 * Become aware of how the `blogdown` R package can be used to create responsive websites
 * Download and compile a starter website based on blogdown. 
 
+**Collaborative notes**: https://hackmd.io/@norcalbiostat/ichps2020_website_notes
 
 ----
 

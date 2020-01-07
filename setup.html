@@ -26,67 +26,41 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {  }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 
 </style>
 <script>
@@ -370,13 +344,6 @@ $(document).ready(function () {
     Setup
   </a>
 </li>
-<li>
-  <a href="mailto:rdonatello@csuchico.edu">
-    <span class="fa fa-question"></span>
-     
-    Contact
-  </a>
-</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -394,11 +361,10 @@ $(document).ready(function () {
 <p><br></p>
 <p>To participate in either of these workshops, you will need a laptop with a user account that has software installation privileges to install the software described below. <em>Note that if you have separate user and admin accounts, you should run the installers as administrator (right-click on .exe file and select “Run as administrator” instead of double-clicking). Otherwise problems may occur later, for example when installing R packages.</em></p>
 <p>In addition, you will need an up-to-date web browser.</p>
-<p>To make best use of the workshop time please have the necessary programs and R packages installed prior to the start of the workshop. If you have any questions, click the <em>Contact</em> link in the top right of this website to email the workshop organizer.</p>
+<p>To make best use of the workshop time please have the necessary programs and R packages installed prior to the start of the workshop. If you have any questions you can email the workshop instructor at the email listed on the <a href="index.html">main page of this website</a>.</p>
 <p>Click the arrows to expand the section to show installation and setup instructions for each program.</p>
 <hr />
-<details>
-<p><summary><font size="3">R (Both workshops)</font></summary></p>
+<p><details> <summary><font size="3">R (Both workshops)</font></summary></p>
 <p><strong>R</strong> is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. The project website is <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a>.</p>
 <ul>
 <li><p><strong>Windows</strong> (<a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>). Install R by downloading and running <a href="https://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a> from CRAN(<a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>).</p></li>
@@ -410,10 +376,9 @@ $(document).ready(function () {
 <li>Default settings are OK.</li>
 <li>Delete any desktop shortcut that was created</li>
 </ul>
-</details>
+<p></details></p>
 <p><br></p>
-<details>
-<p><summary>R Studio (Both workshops)</summary></p>
+<p><details> <summary>R Studio (Both workshops)</summary></p>
 <p>To interact with R, we use the <em>Integrated Development Environment (IDE)</em> called <strong>RStudio</strong> (<a href="https://www.rstudio.com" class="uri">https://www.rstudio.com</a>). The R Studio IDE is installed <em>after</em> you have installed R.</p>
 <ul>
 <li>Download R Studio (v 1.2+) from <a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a>
@@ -436,17 +401,16 @@ $(document).ready(function () {
 </ul>
 <p>This will ensure that when you restart R you do not “carry forward” objects such as data sets that you were working on in a prior assignment.</p>
 <p>You should make a habit to completely shut down R studio when you are done working. Your open tabs will be saved, but your environment will be cleared. <em>This is a good thing.</em></p>
-</details>
+<p></details></p>
 <p><br></p>
-<details>
-<p><summary>R Packages (Both workshops)</summary></p>
+<p><details> <summary>R Packages (Both workshops)</summary></p>
 <p>R is considered an <strong>Open Source</strong> software program. That means many (thousands) of people contribute to the software. They do this by writing commands (called functions) to make a particular analysis easier, or to make a graphic prettier.</p>
 <p>When you download R, you get access to a lot of functions that we will use. However these other <em>user-written</em> packages add so much good stuff that it really is the backbone of the customizability and functionality that makes R so powerful of a language.</p>
 <blockquote>
 <p>You only have to install packages once per R installation.</p>
 </blockquote>
 <p>To get started type in the <strong>console</strong> the following command to install the <code>rmarkdown</code> package.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</code></pre></div>
 <p>When the console returns to showing a <code>&gt;</code> (and the stop sign in the top right corner of the Console window goes away), R is done doing what you asked it to do and ready for you to give it another command. You should get a message that looks similar to the message below.</p>
 <pre><code>The downloaded binary packages are in
     C:\Users\Robin\AppData\Local\Temp\Rtmpi8NAym\downloaded_packages</code></pre>
@@ -460,7 +424,7 @@ $(document).ready(function () {
 <li>kable</li>
 <li>pander</li>
 </ul>
-<p>🌏 <strong>Workshop 13: Website building</strong></p>
+<p>🌎 <strong>Workshop 13: Website building</strong></p>
 <ul>
 <li>knitr</li>
 <li>rmarkdown</li>
@@ -471,35 +435,31 @@ $(document).ready(function () {
 <pre><code>Warning in install.packages :
   package ‘ggplot’ is not available (for R version 3.5.1)</code></pre>
 <p>The correct package name is <code>ggplot2</code>, not <code>ggplot</code>.</p>
-</details>
+<p></details></p>
 <p><br></p>
-<details>
-<p><summary>LaTeX (Reproducible Research workshop only)</summary></p>
+<p><details> <summary>LaTeX (Reproducible Research workshop only)</summary></p>
 <p>To create a PDF directly from your source code you will have to install a lightweight version of <span class="math inline">\(LaTeX\)</span> (a document processing program). This allows you to make professional looking reports.</p>
 <p>Run the following code lines one at a time, waiting for the first one to finish before starting the next. This process can take up to 10 minutes.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;tinytex&quot;</span>)</a>
-<a class="sourceLine" id="cb4-2" title="2">tinytex<span class="op">::</span><span class="kw">install_tinytex</span>()</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;tinytex&quot;</span>)
+tinytex<span class="op">::</span><span class="kw">install_tinytex</span>()</code></pre></div>
 <p>If at any time it asks you to update or install any other packages, say yes to all of them.</p>
-</details>
+<p></details></p>
 <p><br></p>
-<details>
-<p><summary>Git &amp; GitHub (Website building workshop only)</summary></p>
+<p><details> <summary>Git &amp; GitHub (Website building workshop only)</summary></p>
 <p>Git is a version control system that lets you track who made changes to what when and has options for easily updating a shared or public version of your code on <a href="https://github.com" class="uri">https://github.com</a>.</p>
 <p><strong>Instructions to install Git can be found at</strong> <a href="https://www.atlassian.com/git/tutorials/install-git" class="uri">https://www.atlassian.com/git/tutorials/install-git</a></p>
 <p>To share your code and publish your website you will also need a GitHub account at <a href="https://github.com" class="uri">https://github.com</a>. Basic GitHub accounts are free. We encourage you to create a GitHub account prior to the workshop if you don’t have one already. Please consider what personal information you’d like to reveal. For example, you may want to review <a href="https://help.github.com/articles/keeping-your-email-address-private/">these instructions for keeping your email address private</a> provided at GitHub.</p>
 <blockquote>
 <p>Note: This workshop is not an lesson on git. We will use git to do a few things and we will interact with GitHub, but we will not go into details about version control.</p>
 </blockquote>
-</details>
+<p></details></p>
 <p><br></p>
-<details>
-<p><summary>Hugo (Website building workshop only)</summary></p>
+<p><details> <summary>Hugo (Website building workshop only)</summary></p>
 <p>Hugo (<a href="https://gohugo.io" class="uri">https://gohugo.io</a>) is a static site generator, that is used by the R package <code>blogdown</code> to create dynamic websites. <code>blogdown</code> has a helper function to do this installation for us.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">blogdown<span class="op">::</span><span class="kw">install_hugo</span>()</a></code></pre></div>
-</details>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blogdown<span class="op">::</span><span class="kw">install_hugo</span>()</code></pre></div>
+<p></details></p>
 <p><br></p>
-<details>
-<p><summary>[OPTIONAL] Create a Netlify account (Website building workshop only)</summary></p>
+<p><details> <summary>[OPTIONAL] Create a Netlify account (Website building workshop only)</summary></p>
 <p>The blog-aware website that we will be building needs to be hosted somewhere other than GitHub. For beginners, it is recommended to use Netlify for the following reasons</p>
 <ul>
 <li>free</li>
@@ -509,7 +469,7 @@ $(document).ready(function () {
 </ul>
 <p>You can sign up and make an account at <a href="https://www.netlify.com/" class="uri">https://www.netlify.com/</a></p>
 <p>More info/options about deploying/hosting <code>blogdown</code> websites: <a href="https://bookdown.org/yihui/blogdown/deployment.html" class="uri">https://bookdown.org/yihui/blogdown/deployment.html</a></p>
-</details>
+<p></details></p>
 
 
 

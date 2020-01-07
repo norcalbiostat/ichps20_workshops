@@ -13,9 +13,7 @@ navbar:
     - text: "Setup"
       icon: fa-gear
       href: setup.html
-    - text: "Contact"
-      icon: fa-question
-      href: mailto:rdonatello@csuchico.edu 
+
       
 output:
   html_document:

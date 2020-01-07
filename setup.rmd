@@ -10,7 +10,7 @@ _Note that if you have separate user and admin accounts, you should run the inst
 
 In addition, you will need an up-to-date web browser.
 
-To make best use of the workshop time please have the necessary programs and R packages installed prior to the start of the workshop. If you have any questions, click the _Contact_ link in the top right of this website to email the workshop organizer. 
+To make best use of the workshop time please have the necessary programs and R packages installed prior to the start of the workshop. If you have any questions you can email the workshop instructor at the email listed on the [main page of this website](index.html).  
 
 Click the arrows to expand the section to show installation and setup instructions for each program. 
 
